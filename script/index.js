@@ -29,4 +29,3 @@ search.addEventListener('submit', function(e) {
 
 });
     // return movieHtmlArray.join(' ');
-});
