@@ -10,7 +10,7 @@ search.addEventListener('submit', function(e) {
     const urlEncodedSearchString = encodeURIComponent(searchString);
     axios.get("http://www.strainapi.evanbusse.com/Fppxe7R/strains/search/name/" + urlEncodedSearchString)
     .then(function (response) {
-        strainData = response.data.search
+        strainData = response.data.search;
         console.log('strainData');
         console.log(strainData);
         let strainHtmlArray = strainData.map(function (currentStrain) {
