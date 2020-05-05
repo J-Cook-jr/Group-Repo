@@ -2,6 +2,7 @@ const search = document.getElementById('search-form');
 const strainList = document.getElementById('strain-holder');
 // let strainData = [];
 let strainArray;
+
 search.addEventListener('submit', function(e) {
     e.preventDefault();
     const searchString = document.querySelector('input').value;
@@ -25,5 +26,7 @@ search.addEventListener('submit', function(e) {
         console.log(strainArray);
         // console.log(movieData);
     })
+
+});
     // return movieHtmlArray.join(' ');
 });
