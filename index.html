@@ -14,15 +14,25 @@
 
 <body class="bg-warning">
   <!-- <div class="container-fluid bg-warning"> -->
-  <nav class="navbar sticky-top navbar-light bg-warning">
+  <!-- <nav class="navbar sticky-top navbar-light bg-warning">
     <h1><a class="navbar-brand px-md-5" href="#">Herbs.</a></h1>
     <div class="d-flex justify-content-end justify-content-space-between px-md-5">
-      <ion-icon name="search" size="large" class="mr-4"></ion-icon>
-      <ion-icon name="cart" size="large" class="mr-4"></ion-icon>
-      <ion-icon name="location" size="large"></ion-icon>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <input-ion-icon name="search" size="large" class="mr-4">
+        <ion-icon name="cart" size="large" class="mr-4"></ion-icon>
+        <ion-icon name="location" size="large"></ion-icon>
     </div>
 
+
+  </nav> -->
+  <nav class="navbar sticky-top navbar-light bg-warning">
+    <a class="navbar-brand">Herbs.</a>
+    <form id="search-form" class="form-inline">
+      <input id="search-holder" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </nav>
+  <div id="strain-holder" class="bg-warning"></div>
 
 
   <div class="p-1 mb-4 bg-warning text-dark max-vh-100 max-vw-100">

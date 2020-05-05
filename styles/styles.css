@@ -28,6 +28,7 @@ h1{
 .navbar-light .navbar-brand{
     color: rgb(3, 112, 3);
     font-size: 35px;
+    font-weight: bolder;
 }
 
 .card-body{
@@ -62,3 +63,7 @@ li{
     font-weight: bold ;
 }
 
+.card-body{
+    background-color: rgb(247, 191, 10);
+    color:rgba(23, 1, 63, 0.842);
+}
