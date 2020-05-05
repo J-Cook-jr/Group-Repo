@@ -1,5 +1,26 @@
-body {
-    display: flex;
-    justify-content: center;
+#herbs {
+    color: rgba(0, 0, 0, 0.708);
+    font-size: 100px;
+    font-weight: 100;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
+   
 }
 
+* {
+    background-color: rgb(90, 134, 23);
+}
+
+
+#search-form {
+    display: flex;
+    justify-content: center;
+    width: 75;
+    height: 100%;
+    align-items: center;
+
+}
+
+body {
+    text-align: center;
+}
