@@ -1,29 +1,59 @@
 
 const search = document.getElementById('search-form');
 const strainList = document.getElementById('strain-holder');
-let strainData = [];
+// let strainData = [];
 let strainArray;
+
+
+
 
 search.addEventListener('submit', function(e) {
     e.preventDefault();
     const searchString = document.querySelector('input').value;
     const urlEncodedSearchString = encodeURIComponent(searchString);
-    axios.get("http://www.strainapi.evanbusse.com/Fppxe7R/strains/search/name/" + urlEncodedSearchString)
+    axios.get( "http://strainapi.evanbusse.com/Fppxe7R/strains/search/name/" + urlEncodedSearchString)
     .then(function (response) {
-        strainData = response.data.search;
-        console.log('strainData');
+        let strainData = response.data;
+        console.log('movieData');
         console.log(strainData);
         let strainHtmlArray = strainData.map(function (currentStrain) {
             return `
             <div class="card-body">
                 <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                <p>${currentMovie.race}</p>
-                <p>${currentStrain.desc}</p>
-                <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentMovie.imdbID}')">Add To Favorites</button>
+                <p>${currentStrain.race}</p>
+                <p>${currentStrain.desc}
+                <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentStrain.id}')">Add To Favorites</button>
             </div>`
         });
         strainList.innerHTML = strainHtmlArray.join('')
-        strainArray = movieData;
+        strainArray = strainData;
         console.log(strainArray);
+        // console.log(movieData);
     })
-})
+
+    // return movieHtmlArray.join(' ');
+});
+
+// search.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     const searchString = document.querySelector('input').value;
+//     const urlEncodedSearchString = encodeURIComponent(searchString);
+//     axios.get("http://www.omdbapi.com/?apikey=b43843a0&s=" + urlEncodedSearchString)
+//     .then(function (response) {
+//         let strainData = response.data.search;
+//         console.log('strainData');
+//         console.log(strainData);
+//         let strainHtmlArray = strainData.map(function (currentStrain) {
+//             return `
+//             <div class="card-body">
+//                 <h3 class="card-text mx-auto" id="text">${currentStrain.title}</h3>
+//                 <p>${currentMovie.race}</p>
+//                 <p>${currentStrain.desc}</p>
+//                 <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentMovie.id}')">Add To Favorites</button>
+//             </div>`
+//         });
+//         strainList.innerHTML = strainHtmlArray.join('')
+//         strainArray = movieData;
+//         console.log(strainArray);
+//     })
+// })
