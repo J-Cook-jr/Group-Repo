@@ -1,3 +1,64 @@
-html{
+.container{
+    width: 100%;
+  height: 100%;
+  background-image: url ('https://www.badgramm3r.com/wp-content/uploads/2019/03/WHY-ARE-MARIJUANA-BUDS-CALLED-FLOWER.jpg');
+  background-size: 100% 100%;
+}
 
-};
+.card-img{
+    background-size: 100% 100%;
+    
+    
+}
+
+
+
+h1{
+    font: bold;
+    font-size: 380%;
+    font-weight: bolder;
+    
+}
+
+.navbar{
+    background-color: darkgreen;
+    color: rgb(3, 112, 3);
+}
+
+.navbar-light .navbar-brand{
+    color: rgb(3, 112, 3);
+    font-size: 35px;
+}
+
+.card-body{
+    background-color: whitesmoke;
+}
+
+mb-3{
+    padding-top: 20px;
+
+}
+
+img{
+    opacity: 50;
+}
+
+h5{
+    font-weight: bolder;
+    font-size: 380%;
+    text-align: center;
+    color: rgba(23, 1, 63, 0.842);
+
+}
+
+.btn-outline-success{
+    color: rgba(23, 1, 63, 0.842);
+    border-color: rgba(23, 1, 63, 0.842);
+    
+}
+
+li{
+    color: rgba(23, 1, 63, 0.842);
+    font-weight: bold ;
+}
+
