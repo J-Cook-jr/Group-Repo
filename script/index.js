@@ -3,6 +3,23 @@ const strainList = document.getElementById('strain-holder');
 // let strainData = [];
 let strainArray;
 
+function saveToShoppingCart(id) {
+    let cartItem = strainArray.find(currentStrain => currentStrain.id == id);
+    let strainListJSON = localStorage.getItem('strainList');
+
+    let strainList = JSON.parse(strainListJSON);
+
+    if (strainList == null) {
+        strainList = [];
+    }
+    strainList.push(cartItem);
+
+    strainListJSON = JSON.stringify(strainList);
+
+    localStorage.setItem('strainList', strainListJSON);
+    console.log(strainListJSON);
+}
+
 search.addEventListener('submit', function(e) {
     e.preventDefault();
     const searchString = document.querySelector('input').value;
@@ -17,8 +34,8 @@ search.addEventListener('submit', function(e) {
             <div class="card-body">
                 <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
                 <p>${currentStrain.race}</p>
-                <p>${currentStrain.desc}
-                <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentStrain.id}')">Add To Cart</button>
+                <p>${currentStrain.desc}</p>
+                <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add To Cart</button>
             </div>`
         });
         strainList.innerHTML = strainHtmlArray.join('')
@@ -29,4 +46,3 @@ search.addEventListener('submit', function(e) {
 
 });
     // return movieHtmlArray.join(' ');
-
