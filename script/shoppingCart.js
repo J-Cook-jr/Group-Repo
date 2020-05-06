@@ -1,15 +1,54 @@
+
+const strainList = document.getElementById('strain-holder2');
+
+
+function removeFromCart(id) {
+    let cartJSON = localStorage.getItem('strainList');
+    
+    let cartItem = JSON.parse(cartJSON);
+    console.log(cartItem);
+
+    cartItem = cartItem.filter(function (item){
+        if(id !== item.id) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+    strainListJSON = JSON.stringify(cartItem);
+
+    localStorage.setItem('strainList', cartJSON);
+    console.log(cartJSON);
+
+    // if (watchlist == null) {
+    //     watchlist = [];
+    // }
+    // console.log(watchlist);
+    // removeList = watchlist.filter(imdbID, movie);
+
+    // localStorage.setItem('watchlist', watchlistJSON);
+
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-    let favoritesListJSON = localStorage.getItem('watchlist');
-    let favoritesList = JSON.parse(favoritesListJSON)
-    let movieHtmlArray = favoritesList.map(function (currentMovie) {
+    let shoppingCartJSON = localStorage.getItem('strainList');
+    let shoppingCart = JSON.parse(shoppingCartJSON)
+    console.log(shoppingCart);
+    let strainHtmlArray = shoppingCart.map(function (currentStrain) {
         return `
         <div class="card-body">
-            <img src="${currentMovie.Poster}">
-            <h3 class="card-text mx-auto">${currentMovie.Title}</h3>
-            <p>${currentMovie.Year}</p>
-            <button type="button" class="btn btn-primary" id="pic" onclick="removeFavorites('${currentMovie.imdbID}')">remove from favorites</button>
+            <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
+            <p>${currentStrain.race}</p>
+            <p>${currentStrain.desc}</p>
+            <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
         </div>`
     });
-    movieArray = movieData;
-    list.innerHTML = movieHtmlArray.join('')
+    strainList.innerHTML = strainHtmlArray.join('')
+    strainArray = strainData;
+    console.log(strainArray);
+    // strainArray = strainData;
+    // console.log(strainArray);
 });
+   
