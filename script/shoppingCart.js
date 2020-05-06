@@ -9,7 +9,7 @@ function removeFromCart(id) {
     console.log(cartItem);
 
     cartItem = cartItem.filter(function (item){
-        if(id !== item.id) {
+        if(id === item.id) {
             return true;
         }
         else {
@@ -17,8 +17,7 @@ function removeFromCart(id) {
         }
     })
 
-    strainListJSON = JSON.stringify(cartItem);
-
+    cartJSON = JSON.stringify(cartItem);
     localStorage.setItem('strainList', cartJSON);
     console.log(cartJSON);
 
