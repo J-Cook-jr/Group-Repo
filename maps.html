@@ -45,13 +45,13 @@
         var map = new mapboxgl.Map({
             container:  'map',
             style: 'mapbox://styles/mapbox/streets-v11',
-            center: [-84.388305, 33.749806], // starting position as [lng, lat]
+            center: [-84.388305, 33.922646], // starting position as [lng, lat]
             zoom: 13
         });
         map.addControl(new mapboxgl.NavigationControl());
 
-        // var popup = new mapboxgl.Popup()
-        //     .setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
+        var popup = new mapboxgl.Popup()
+            .setHTML('<h3>Reykjavik Roasters</h3><p>A good coffee shop</p>');
 
         var marker = new mapboxgl.Marker()
             .setLngLat([-84.388305, 33.749806])
