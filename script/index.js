@@ -18,7 +18,7 @@ search.addEventListener('submit', function(e) {
                 <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
                 <p>${currentStrain.race}</p>
                 <p>${currentStrain.desc}
-                <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentStrain.id}')">Add To Favorites</button>
+                <button type="button" class="btn btn-primary" id="pic" onclick="saveToWatchList('${currentStrain.id}')">Add To Cart</button>
             </div>`
         });
         strainList.innerHTML = strainHtmlArray.join('')
@@ -29,4 +29,4 @@ search.addEventListener('submit', function(e) {
 
 });
     // return movieHtmlArray.join(' ');
-});
+
