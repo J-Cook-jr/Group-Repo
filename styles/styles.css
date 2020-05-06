@@ -52,9 +52,10 @@ h5{
 
 }
 
-.btn-outline-success{
-    color: rgba(23, 1, 63, 0.842);
+.btn btn-primary btn-lg active{
+    color: rgb(247, 191, 10);
     border-color: rgba(23, 1, 63, 0.842);
+    background-color: rgba(23, 1, 63, 0.842); ;
     
 }
 
