@@ -68,3 +68,7 @@ li{
     background-color: rgb(247, 191, 10);
     color:rgba(23, 1, 63, 0.842);
 }
+
+map{
+    padding-bottom: 0px;
+}
