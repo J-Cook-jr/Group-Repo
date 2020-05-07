@@ -7,7 +7,11 @@
    
 }
 
-* {
+nav {
+    background-color: rgb(90, 134, 23);
+}
+
+.card {
     background-color: rgb(90, 134, 23);
 }
 
@@ -24,3 +28,12 @@
 body {
     text-align: center;
 }
+
+.container {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
