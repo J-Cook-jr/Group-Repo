@@ -1,5 +1,6 @@
 
 const strainList = document.getElementById('strain-holder2');
+const message = document.getElementById('message');
 
 
 function removeFromCart(id) {
@@ -16,6 +17,9 @@ function removeFromCart(id) {
             return false;
         }
     })
+    if (cartItem.length === 0) {
+        message.innerHTML = 'Your cart is empty'
+    }
 
     cartJSON = JSON.stringify(cartItem);
     localStorage.setItem('strainList', cartJSON);
@@ -47,6 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
     strainList.innerHTML = strainHtmlArray.join('')
     strainArray = strainData;
     console.log(strainArray);
+
+
+    if (shoppingCart.length > 0) {
+        message.innerHTML = ('')
+    }
     // strainArray = strainData;
     // console.log(strainArray);
 });
