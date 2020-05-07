@@ -36,24 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let shoppingCart = JSON.parse(shoppingCartJSON)
     console.log(shoppingCart);
     let strainHtmlArray = shoppingCart.map(function (currentStrain) {
-        if (currentStrain.desc === null) {
-            return `
-            <div class="card-body">
-                <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                <p>${currentStrain.race}</p>
-                <p>No description available</p>
-                <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
-                </div>`
-        }
-        else {
-            return `
-            <div class="card-body">
-                <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                <p>${currentStrain.race}</p>
-                <p>${currentStrain.desc}</p>
-                <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+        return `
+        <div class="card-body">
+            <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
+            <p>${currentStrain.race}</p>
+            <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
             </div>`
-        }
     });
     strainArray = strainData;
     strainList.innerHTML = strainHtmlArray.join('')
