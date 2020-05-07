@@ -4,12 +4,13 @@ const strainList = document.getElementById('strain-holder');
 let strainArray;
 
 function saveToShoppingCart(id) {
+    debugger
     let cartItem = strainArray.find(currentStrain => currentStrain.id == id);
     let strainListJSON = localStorage.getItem('strainList');
 
     let strainList = JSON.parse(strainListJSON);
 
-    if (strainList == null) {
+    if (strainList === null) {
         strainList = [];
     }
     strainList.push(cartItem);
@@ -19,6 +20,11 @@ function saveToShoppingCart(id) {
     localStorage.setItem('strainList', strainListJSON);
     console.log(strainListJSON);
 }
+
+
+
+
+
 
 search.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -34,8 +40,8 @@ search.addEventListener('submit', function(e) {
             <div class="card-body">
                 <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
                 <p>${currentStrain.race}</p>
-                <p>${currentStrain.desc}</p>
-                <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add To Cart</button>
+                // <p>${currentStrain.desc}</p>
+                <button type="button" class="btn btn-btn btn-dark" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add To Cart</button>
             </div>`
         });
         strainList.innerHTML = strainHtmlArray.join('')
@@ -46,3 +52,5 @@ search.addEventListener('submit', function(e) {
 
 });
     // return movieHtmlArray.join(' ');
+
+

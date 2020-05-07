@@ -27,6 +27,7 @@ nav {
 
 body {
     text-align: center;
+    background-color: rgb(90, 134, 23);
 }
 
 .container {
@@ -82,5 +83,29 @@ body {
 }
 
 btn btn-default dropdown-toggle {
+    color: rgb(88, 88, 88);
+}
+
+*, {
+    background-color: rgb(90, 134, 23);
+}
+
+
+#holder, #holder2, #holder3 {
+    border: 1px solid black;
+}
+
+h1 {
+    font-size: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: rgb(88, 88, 88);
+}
+
+#emptycart:visited{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     color: rgb(88, 88, 88);
 }
