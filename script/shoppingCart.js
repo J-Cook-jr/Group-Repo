@@ -1,6 +1,7 @@
 
 const strainList = document.getElementById('strain-holder2');
 const message = document.getElementById('message');
+const checkoutButton = document.getElementById('checkout');
 
 function removeFromCart(id) {
     newid = parseInt(id);
@@ -29,9 +30,6 @@ function removeFromCart(id) {
 
 }
 
-function checkout(data){
-
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     let shoppingCartJSON = localStorage.getItem('strainList');
@@ -42,8 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="card-body">
             <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
             <p>${currentStrain.race}</p>
+<<<<<<< HEAD
             <button type="button" class="btn-secondary btn-outline " id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
         </div>`
+=======
+            <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+            </div>`
+>>>>>>> acd5bc9d7136f102e65b2a31944f47caa72baa70
     });
     strainArray = strainData;
     strainList.innerHTML = strainHtmlArray.join('')
@@ -57,6 +60,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // console.log(strainArray);
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     return `
-// });
+
+checkoutButton.addEventListener('click', function(){
+    let shoppingCartJSON = localStorage.getItem('strainList');
+
+    shoppingCartJSON = null;
+
+
+    localStorage.setItem('strainList', shoppingCartJSON);
+});
