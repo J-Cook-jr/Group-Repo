@@ -20,8 +20,9 @@ function removeFromCart(id) {
         }
     })
     if (cartItem.length === 0) {
-        message.innerHTML = 'Your cart is empty';
+        message.innerHTML = 'Your cart is empty'
     }
+
     cartJSON = JSON.stringify(cartItem);
     localStorage.setItem('strainList', cartJSON);
     console.log(cartJSON);
@@ -48,6 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
     strainArray = strainData;
     strainList.innerHTML = strainHtmlArray.join('')
     console.log(strainArray);
+
+
+    if (shoppingCart.length > 0) {
+        message.innerHTML = ('')
+    }
     // strainArray = strainData;
     // console.log(strainArray);
 });
