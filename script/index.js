@@ -30,13 +30,24 @@ search.addEventListener('submit', function(e) {
         console.log('movieData');
         console.log(strainData);
         let strainHtmlArray = strainData.map(function (currentStrain) {
-            return `
-            <div class="card-body">
-                <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                <p>${currentStrain.race}</p>
-                <p>${currentStrain.desc}</p>
-                <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add To Cart</button>
-            </div>`
+            if (currentStrain.desc === null) {
+                return `
+                <div class="card-body">
+                    <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
+                    <p>${currentStrain.race}</p>
+                    <p>No description available</p>
+                    <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+                    </div>`
+            }
+            else {
+                return `
+                <div class="card-body">
+                    <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
+                    <p>${currentStrain.race}</p>
+                    <p>${currentStrain.desc}</p>
+                    <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+                </div>`
+            }
         });
         strainList.innerHTML = strainHtmlArray.join('')
         strainArray = strainData;
