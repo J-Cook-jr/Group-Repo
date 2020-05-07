@@ -36,7 +36,7 @@ search.addEventListener('submit', function(e) {
                     <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
                     <p>${currentStrain.race}</p>
                     <p>No description available</p>
-                    <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+                    <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
                     </div>`
             }
             else {
@@ -45,7 +45,7 @@ search.addEventListener('submit', function(e) {
                     <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
                     <p>${currentStrain.race}</p>
                     <p>${currentStrain.desc}</p>
-                    <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+                    <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
                 </div>`
             }
         });

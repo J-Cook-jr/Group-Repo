@@ -1,6 +1,7 @@
 
 const strainList = document.getElementById('strain-holder2');
 const message = document.getElementById('message');
+const checkoutButton = document.getElementById('checkout');
 
 function removeFromCart(id) {
     newid = parseInt(id);
@@ -29,9 +30,6 @@ function removeFromCart(id) {
 
 }
 
-function checkout(data){
-
-}
 
 document.addEventListener('DOMContentLoaded', function() {
     let shoppingCartJSON = localStorage.getItem('strainList');
@@ -67,4 +65,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // strainArray = strainData;
     // console.log(strainArray);
+});
+
+
+checkoutButton.addEventListener('click', function(){
+    let shoppingCartJSON = localStorage.getItem('strainList');
+
+    shoppingCartJSON = null;
+
+
+    localStorage.setItem('strainList', shoppingCartJSON);
 });
