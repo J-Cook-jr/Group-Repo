@@ -75,12 +75,12 @@
             color: #fff;
         }
 
-        .btn-success{
+        .btn-success {
             background-color: #00853e;
             border-color: whitesmoke;
             float: right;
         }
-            
+
 
         .listings {
             height: 100%;
@@ -367,6 +367,7 @@
                         'coordinates': [-84.377647, 33.922646]
                     },
                     'properties': {
+                        'description': '<strong>Muhsinah</strong><p>Jazz-influenced hip hop artist Muhsinah plays the Black Cat (1811 14th Street NW) tonight with Exit Clov and Gods’illa. 9:00 p.m. $12.</p>',
                         'phoneFormatted': '(555) 555-555',
                         'phone': '5555555555',
                         'address': '11935 Boylston dr.',
@@ -533,8 +534,8 @@
                 });
             });
         }
-
-
+        
+        
         function flyToStore(currentFeature) {
             map.flyTo({
                 center: currentFeature.geometry.coordinates,
@@ -546,16 +547,21 @@
         function createPopUp(currentFeature) {
             var popUps = document.getElementsByClassName('mapboxgl-popup');
             if (popUps[0]) popUps[0].remove();
-            var popup = new mapboxgl.Popup({ closeOnClick: false })
+            var popup = new mapboxgl.Popup({ closeOnClick: false });
+            popup
                 .setLngLat(currentFeature.geometry.coordinates)
                 .setHTML(
                     '<h3>Herbs.</h3>' +
                     '<h4>' +
-                    currentFeature.properties.address +
-                    '</h4>'
+                    currentFeature.properties.address + '</h4>' + '<h4>' +
+                    currentFeature.properties.postalCode + '</h4>'
+                    
                 )
                 .addTo(map);
         }
+
+
+
     </script>
 </body>
 
