@@ -39,3 +39,8 @@ h4{
     margin-left: 50px;
     margin-right: 50px;
 }
+
+.card-title{
+    color: darkgreen;
+    font-weight: bolder;
+}
