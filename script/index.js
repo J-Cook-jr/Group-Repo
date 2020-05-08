@@ -61,6 +61,7 @@ search.addEventListener('submit', function(e) {
         strainList.innerHTML = strainHtmlArray.join('')
         strainArray = strainData;
         console.log(strainArray);
+        
         // console.log(movieData);
     })
 

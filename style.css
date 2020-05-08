@@ -37,10 +37,6 @@ nav-item nav-link:visited {
     color: rgb(88, 88, 88);
 }
 
-/* btn btn-default dropdown-toggle {
-    color: rgb(88, 88, 88);
-} */
-
 #emptycart:visited{
     color: rgb(88, 88, 88);
     font-size: 35px;
@@ -49,23 +45,23 @@ nav-item nav-link:visited {
 #search {
     border: 1px solid black;
     width: 50%;
-    margin: 15px auto;
+    margin: 20px auto;
     padding: 5px;
 }
 
 #checkout {
     width: 70%;
     margin: 25px;
-   
 }
 #cart {
     border: 1px solid black;
     width: 50%;
     margin: 15px auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: white;
-    justify-content: space-around;
+    justify-content: space-between;
+    text-align: center;
 }
 
 #para {
@@ -103,41 +99,11 @@ h1 {
     background-color: rgb(90, 134, 23);
 }
 
-
-
-/* .modal-title {
-    display: block;
-    width: 100%;
-    color: white;
+#pic1 {
+    font-size: 40px;
 }
 
-.modal-body p{
-    margin: 10px;
-    font-weight: 500;
-    color: white;
+#pic {
+    margin: 15px;
 }
-
-.modal-content {
-    background-color: black;
-}
-
-.dropdown-menu {
-    background-color: black;
-    color: black;
-}
-
-.dropdown li {
-    color: black;
-    padding: 15px;
-    margin: 5px;
-    
-}
-
-.dropdown li a:visited {
-    color: white;
-}
-
-.dropdown li a:link {
-    color: white;
-} */
 
