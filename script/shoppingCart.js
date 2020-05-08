@@ -26,7 +26,7 @@ function removeFromCart(id) {
 
     cartJSON = JSON.stringify(cartItem);
     localStorage.setItem('strainList', cartJSON);
-    console.log(cartJSON);
+    location.reload();
 
 }
 
@@ -58,9 +58,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 checkoutButton.addEventListener('click', function(){
     let shoppingCartJSON = localStorage.getItem('strainList');
-
+    
+    alert('Thank you for your purchase!');
     shoppingCartJSON = null;
 
+    location.reload();
 
-    localStorage.setItem('strainList', shoppingCartJSON);
+    return localStorage.setItem('strainList', shoppingCartJSON);
+    
 });

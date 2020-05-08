@@ -8,12 +8,13 @@ function saveToShoppingCart(id) {
     let strainListJSON = localStorage.getItem('strainList');
 
     let strainList = JSON.parse(strainListJSON);
-
+    
     if (strainList == null) {
         strainList = [];
     }
+    
     strainList.push(cartItem);
-
+    alert(cartItem.name + ' Has been added to your cart')
     strainListJSON = JSON.stringify(strainList);
 
     localStorage.setItem('strainList', strainListJSON);
