@@ -4,12 +4,15 @@ const strainList = document.getElementById('strain-holder');
 let strainArray;
 
 function saveToShoppingCart(id) {
+    debugger
     let cartItem = strainArray.find(currentStrain => currentStrain.id == id);
     let strainListJSON = localStorage.getItem('strainList');
 
     let strainList = JSON.parse(strainListJSON);
+
     
     if (strainList == null) {
+      
         strainList = [];
     }
     
@@ -20,6 +23,11 @@ function saveToShoppingCart(id) {
     localStorage.setItem('strainList', strainListJSON);
     console.log(strainListJSON);
 }
+
+
+
+
+
 
 search.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -33,20 +41,20 @@ search.addEventListener('submit', function(e) {
         let strainHtmlArray = strainData.map(function (currentStrain) {
             if (currentStrain.desc === null) {
                 return `
-                <div class="card-body">
+                <div class="card-body" id="search">
                     <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                    <p>${currentStrain.race}</p>
+                    <p id="para">${currentStrain.race}</p>
                     <p>No description available</p>
-                    <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
+                    <button type="button" class="btn btn-secondary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
                     </div>`
             }
             else {
                 return `
-                <div class="card-body">
+                <div class="card-body" id="search">
                     <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                    <p>${currentStrain.race}</p>
+                    <p id="para">${currentStrain.race}</p>
                     <p>${currentStrain.desc}</p>
-                    <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
+                    <button type="button" class="btn btn-secondary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
                 </div>`
             }
         });
@@ -58,3 +66,5 @@ search.addEventListener('submit', function(e) {
 
 });
     // return movieHtmlArray.join(' ');
+
+

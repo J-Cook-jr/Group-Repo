@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(shoppingCart);
     let strainHtmlArray = shoppingCart.map(function (currentStrain) {
         return `
-        <div class="card-body">
+        <div class="card-body" id="cart">
             <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-            <p>${currentStrain.race}</p>
-            <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+            <p id="para">${currentStrain.race}</p>
+            <button type="button" class="btn btn-secondary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
             </div>`
     });
     strainArray = strainData;
