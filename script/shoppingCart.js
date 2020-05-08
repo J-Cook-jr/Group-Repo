@@ -37,16 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(shoppingCart);
     let strainHtmlArray = shoppingCart.map(function (currentStrain) {
         return `
-        <div class="card-body">
+        <div class="card-body" id="cart">
             <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-            <p>${currentStrain.race}</p>
-<<<<<<< HEAD
-            <button type="button" class="btn-secondary btn-outline " id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
-        </div>`
-=======
-            <button type="button" class="btn btn-primary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
+            <p id="para">${currentStrain.race}</p>
+            <button type="button" class="btn btn-secondary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
             </div>`
->>>>>>> acd5bc9d7136f102e65b2a31944f47caa72baa70
     });
     strainArray = strainData;
     strainList.innerHTML = strainHtmlArray.join('')
