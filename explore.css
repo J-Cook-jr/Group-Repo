@@ -27,5 +27,15 @@ h4{
 
 .container{
     padding: 10px 10px 10px 10px;
-    border: black;
+   
+}
+
+.Container{
+    border: lightgrey;
+    border-width: 1px;
+    border-style: solid;
+    padding: 20px 20px 20px 20px;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
