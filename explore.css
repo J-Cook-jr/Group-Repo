@@ -1,0 +1,9 @@
+html,body{
+    height:100%;
+    width: 100%;
+}
+
+.bg-image{
+    background-image: url('images/marijuana-cannabis-leaf-background-realistic-illustration-plant-top-view_38359-197.jpg');
+    background-size: cover;
+}
