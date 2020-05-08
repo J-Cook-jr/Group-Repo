@@ -1,14 +1,31 @@
 html,body{
     height:100%;
     width: 100%;
+    background-color: whitesmoke;
 }
 
 .bg-image{
-    opacity: ;
     background-image: url('images/mj.jpg');
     background-size: cover;
 }
 
 h1{
-    color: white;
+    
+    color: whitesmoke;
+}
+
+.lead{
+    color: whitesmoke;
+}
+
+h4{
+    color: grey;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    justify-content: center;
+}
+
+.container{
+    padding: 10px 10px 10px 10px;
+    border: black;
 }
