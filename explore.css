@@ -4,6 +4,11 @@ html,body{
 }
 
 .bg-image{
-    background-image: url('images/marijuana-cannabis-leaf-background-realistic-illustration-plant-top-view_38359-197.jpg');
+    opacity: ;
+    background-image: url('images/mj.jpg');
     background-size: cover;
+}
+
+h1{
+    color: white;
 }
