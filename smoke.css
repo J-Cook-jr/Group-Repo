@@ -5,13 +5,14 @@ html,body{
 }
 
 .bg-image{
-    background-image: url('images/mj.jpg');
+    background-image: url('images/bodybg.jpg');
     background-size: cover;
 }
 
 h1{
     
     color: whitesmoke;
+    align-content: center;
 }
 
 .lead{
