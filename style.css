@@ -58,7 +58,7 @@ nav-item nav-link:visited {
     width: 50%;
     margin: 15px auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: white;
     justify-content: space-between;
     text-align: center;
@@ -100,7 +100,8 @@ h1 {
 }
 
 #pic1 {
-    font-size: 40px;
+    width: 50%;
+    margin: 0 auto;
 }
 
 #pic {

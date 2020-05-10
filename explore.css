@@ -7,3 +7,21 @@ html,body{
     background-image: url('images/marijuana-cannabis-leaf-background-realistic-illustration-plant-top-view_38359-197.jpg');
     background-size: cover;
 }
+
+.display-4 {
+    color: white;
+}
+
+.lead {
+    color: white;
+}
+
+.card {
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.navbar {
+    background-color: rgb(90, 134, 23);
+    margin-bottom: 5px;
+}
