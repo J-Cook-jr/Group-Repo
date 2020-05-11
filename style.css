@@ -2,12 +2,13 @@
     color: rgb(88, 88, 88);
     font-size: 100px;
     font-weight: 100;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
-   
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+nav {
+    background-color: rgb(90, 134, 23);
 }
 
-nav {
+.navbar navbar-expand-lg navbar-light bg-light {
     background-color: rgb(90, 134, 23);
 }
 
@@ -15,29 +16,96 @@ nav {
     background-color: rgb(90, 134, 23);
 }
 
-
 #search-form {
     display: flex;
     justify-content: center;
     width: 75;
     height: 100%;
     align-items: center;
-
 }
 
 body {
     text-align: center;
+    background-color: rgb(90, 134, 23);
+}
+
+nav-item nav-link:visited {
+    color: rgb(88, 88, 88);
+}
+
+.nav-item nav-link:link {
+    color: rgb(88, 88, 88);
+}
+
+/* btn btn-default dropdown-toggle {
+    color: rgb(88, 88, 88);
+} */
+
+#emptycart:visited{
+    color: rgb(88, 88, 88);
+    font-size: 35px;
+}
+
+#search {
+    border: 1px solid black;
+    width: 50%;
+    margin: 15px auto;
+    padding: 5px;
+}
+
+#checkout {
+    width: 70%;
+    margin: 25px;
+   
+}
+#cart {
+    border: 1px solid black;
+    width: 50%;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+}
+
+#para {
+    margin: 5px auto;
+    font-weight: 500;
+
+}
+
+h1 {
+    font-size: 55px;
+    color: rgb(88, 88, 88);
+    margin: 20px;
+    background-color: white;
 }
 
 .container {
-    display: flex;
-    background-color: white;
-    justify-content: center;
-    flex-direction: column;
+    background-color:white;
+    margin: 20px auto;
+    
+    
+}
+
+#emptycart {
+    font-size: 25px;
+    margin: 15px;
+    color: rgb(88, 88, 88);
+    background-color: rgb(90, 134, 23);;
+}
+
+#herbs2 {
+    color: rgb(88, 88, 88);
+    font-size: 100px;
+    font-weight: 100;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    background-color: rgb(90, 134, 23);
 }
 
 
-.modal-title {
+
+/* .modal-title {
     display: block;
     width: 100%;
     color: white;
@@ -71,16 +139,5 @@ body {
 
 .dropdown li a:link {
     color: white;
-}
+} */
 
-.nav-item nav-link:visited {
-    color: rgb(88, 88, 88);
-}
-
-.nav-item nav-link:link {
-    color: rgb(88, 88, 88);
-}
-
-btn btn-default dropdown-toggle {
-    color: rgb(88, 88, 88);
-}
