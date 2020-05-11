@@ -1,4 +1,5 @@
 html,body{
+    
     height:100%;
     width: 100%;
     background-color: whitesmoke;
@@ -32,8 +33,9 @@ h4{
    
 }
 
-.Container{
+.Container1{
     border: lightgrey;
+    background-color: white;
     border-width: 1px;
     border-style: solid;
     padding: 20px 20px 20px 20px;
@@ -48,11 +50,11 @@ h4{
 }
 
 .card-body{
-    height: 50%;
+    height: 60%;
 }
 
 .card-img-top{
-    height: 50%;
+    height: 40%;
 }
 
 footer{
@@ -61,4 +63,16 @@ footer{
 
 .nav{
     margin-top: 15px;
+}
+
+footer{
+    color: darkgreen;
+}
+
+.nav{
+    margin-top: 15px;
+}
+
+.list-img-center{
+    size: 20px;
 }
