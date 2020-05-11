@@ -38,7 +38,7 @@ search.addEventListener('submit', function(e) {
     e.preventDefault();
     const searchString = document.querySelector('input').value;
     const urlEncodedSearchString = encodeURIComponent(searchString);
-    axios.get( "http://strainapi.evanbusse.com/Fppxe7R/strains/search/name/" + urlEncodedSearchString)
+    axios.get( "https://strainapi.evanbusse.com/Fppxe7R/strains/search/name/" + urlEncodedSearchString)
     .then(function (response) {
         let strainData = response.data;
         let strainHtmlArray = strainData.map(function (currentStrain) {

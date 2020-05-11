@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
         <div class="card-body" id="cart">
             <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-            <img src="images/${raceImage(currentStrain.race)}" height="200px">
+            <img src="images/${raceImage(currentStrain.race)}" height="275px">
             <p id="para">${currentStrain.race}</p>
             <button type="button" class="btn btn-secondary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
             </div>`
