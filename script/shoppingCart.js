@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="card-body" id="cart">
             <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
             <p id="para">${currentStrain.race}</p>
-            <button type="button" class="btn btn-secondary" id="pic1" onclick="removeFromCart('${currentStrain.id}')"> Remove from cart </button>
+            <button type="button" class="btn btn-secondary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
             </div>`
     });
     strainArray = strainData;
