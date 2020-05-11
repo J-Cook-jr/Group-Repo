@@ -46,7 +46,7 @@ search.addEventListener('submit', function(e) {
                 return `
                 <div class="card-body">
                     <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                    <img src="images/${raceImage(currentStrain.race)}">
+                    <img src="images/${raceImage(currentStrain.race)}" height="150px" width="150px">
                     <p>${currentStrain.race}</p>
                     <p>No description available</p>
                     <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>
@@ -56,7 +56,7 @@ search.addEventListener('submit', function(e) {
                 return `
                 <div class="card-body">
                     <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
-                    <img src="images/${raceImage(currentStrain.race)}">
+                    <img src="images/${raceImage(currentStrain.race)}" height="150px" width="150px">
                     <p>${currentStrain.race}</p>
                     <p>${currentStrain.desc}</p>
                     <button type="button" class="btn btn-primary" id="pic" onclick="saveToShoppingCart('${currentStrain.id}')">Add to cart</button>

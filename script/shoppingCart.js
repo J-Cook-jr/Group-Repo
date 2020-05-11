@@ -30,6 +30,19 @@ function removeFromCart(id) {
 
 }
 
+function raceImage(race) {
+    console.log(race);
+    if (race === 'indica'){
+        return 'indica.jpg';
+    }
+    else if (race === 'sativa'){
+        return 'sativa.jpg';
+    }
+    else if (race === 'hybrid'){
+        return 'hybrid.png';
+    }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     let shoppingCartJSON = localStorage.getItem('strainList');
@@ -39,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `
         <div class="card-body" id="cart">
             <h3 class="card-text mx-auto" id="text">${currentStrain.name}</h3>
+            <img src="images/${raceImage(currentStrain.race)}" height="200px">
             <p id="para">${currentStrain.race}</p>
             <button type="button" class="btn btn-secondary" id="pic" onclick="removeFromCart('${currentStrain.id}')">Remove From Cart</button>
             </div>`
